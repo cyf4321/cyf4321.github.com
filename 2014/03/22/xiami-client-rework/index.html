@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>勿忘初心 - 虾米音乐 APP 场景化有感 - Greg's Blog</title>
+  <meta name="author" content="Greg">
+
+  
+  <meta name="description" content="在看 IN成都 这两天的数据，联想到虾米客户端“发现音乐”的各种不爽，索性说说我的想法。 问了几个使用虾米的朋友，都觉得虾米“发现音乐”推荐的内容没有代入感。
+观察虾米的客户端，顶部 banner 推荐一些商业性内容和活动，以及部分精华 UGC；“猜你喜欢”会根据以往的喜好推荐歌单、专辑、精选集 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://chenyifan.me/github/2014/03/22/xiami-client-rework">
+  <link href="/github/favicon.png" rel="icon">
+  <link href="/github/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/github/atom.xml" rel="alternate" title="Greg's Blog" type="application/atom+xml">
+  <script src="/github/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/github/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45989109-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/github/">Greg's Blog</a></h1>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/github/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:chenyifan.me/github" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/github/">Blog</a></li>
+  <li><a href="/github/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">勿忘初心 - 虾米音乐 APP 场景化有感</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-22T20:28:36+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://chenyifan.me/github">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>在看 IN成都 这两天的数据，联想到虾米客户端“发现音乐”的各种不爽，索性说说我的想法。</p>
+
+<p>问了几个使用虾米的朋友，都觉得虾米“发现音乐”推荐的内容没有代入感。<br/>
+观察虾米的客户端，顶部 banner 推荐一些商业性内容和活动，以及部分精华 UGC；“猜你喜欢”会根据以往的喜好推荐歌单、专辑、精选集；“热门歌曲”是热门试听和音乐人等商业元素的混搭；其他层级平行的页面也了无新意，延续的还是 web 版的思路。</p>
+
+<p>首先分析下用户在什么场景下会使用虾米和网络状况：</p>
+
+<!-- more -->
+
+
+<ul>
+<li>路上走路：无 wifi</li>
+<li>交通工具：无 wifi（公共交通工具 wifi 覆盖尚未普及）</li>
+<li>家里：有 wifi ，可用电脑（包含 PC + 平板，下同）替代。</li>
+<li>办公室：多数有 wifi，但网速不稳定，可用电脑替代。</li>
+<li>教室：多数无 wifi</li>
+<li>开车：无 wifi</li>
+<li>健身房：多数有 wifi，但网速不稳定，不可用电脑替代。</li>
+</ul>
+
+
+<p> “路上”、“家里”、“办公室”&hellip;&hellip; 这些地点其实不是场景，仅仅是位置。<br/>
+场景需要描述情景、角色和那时那地的情况，动机和需求都可能特定场景发生变化。</p>
+
+<p>所以，我们再来深入的对这些位置进行情感化分析：</p>
+
+<ul>
+<li><h6>上下班路上</h6>
+
+<p>无论是步行，还是公交地铁，需要用一点节奏让你一大早精神焕发，听着这些节奏明快的旋律，一天上班的心情也开始明朗，让上班的路上不再孤单，让下班的路上不再茫然。</p></li>
+<li><h6>工作学习阅读</h6>
+
+<p>不能喧宾夺主吵到无法专心，同时还能惬意的享受其中，音乐必须是柔和或轻快的，能平复心绪的舒缓音乐，可以暂时忽略缓慢的时间流失，又不会昏昏欲睡，希望能起到帮助集中注意力。</p></li>
+<li><h6>加班熬夜</h6>
+
+<p>加班时需要的音乐与工作时需要的音乐类似，但必要要能提神，工作速度加快了，效率提升了，整个人精神了。</p></li>
+<li><h6>午休</h6>
+
+<p>在吵闹的办公室午休，需要旋律平缓妨害率低的音乐、催眠的音乐、沉沦的音乐、听着听着做美梦的音乐快速进入梦乡，进入似睡似醒般的神游状态，就算没睡着，身心得到緩解那是不错的。</p></li>
+<li><h6>运动健身</h6>
+
+<p>需要有节奏的，很燃的，能给人力量的音乐，这里又可以延伸出慢跑或力量练习时的场景，需要有锻炼的节奏感，跟着节奏自嗨，流汗越听越有劲。</p></li>
+<li><h6>睡前音乐</h6>
+
+<p>睡前服用，不能太high，要轻柔、舒缓、安静的，平复心中杂念，抵抗失眠良药。一觉睡醒，也许明天就是美好的一天。快乐的还会快乐，纠结的能得到释怀，苦逼的能时来运转。</p></li>
+</ul>
+
+
+<p>我看不到虾米的数据，不知道虾米客户端现在使用时间分布在哪些具体的时间段，猜想的话，活跃时间依次是：下午 17:30 &ndash; 20:00，晚上 22:00 &ndash; 00:00，早上  7:30 &ndash; 9:30，中午 12:30 &ndash; 14:00。<br/>
+继续 YY 下数据，下午 17:30 &ndash; 20:00 、早上  7:30 &ndash; 9:30 这两个时间段用得最多“本地音乐”；另外，还可以查下经常使用“下载”功能的时间是不是下午和晚上作为参考数据，使用目的为的是可以不用 3G 流量听歌。</p>
+
+<p>一句话，就是现在的设计偏离了用户使用虾米客户端的具体场景。没有考虑用户使用手机时的位置、时间和那时那地状态。用户很难通过客户端在音乐中寻找情感共鸣和认同，让当前的情绪达到最大值。</p>
+
+<p>毕竟无论技术、平台如何变化，内容仍然是王。</p>
+
+<p>目前最应该做的，是去和三家运营商合作，5 元、8 元、10 元流量包月。虾米现在的用户群应该能取得不错的收入，而且对用户来说，这也是最好的。如果 OK 的话，保持现有的客户端功能架构也是可以的。但需要在内容推荐上更场景化一些，增加用户使用机会。这是最优方案。</p>
+
+<p>如果没有流量包的话，就需要优化我的音乐了，提高使用效率了。弱化界面视觉观感，增强操控性，降低操作难度，比如页面头部那一大块区域。</p>
+
+<p>特别是本地歌曲管理，需要按下载时间排序功能。一年前喜欢的歌，现在不一定喜欢了，但要从手机上找到这些不喜欢了歌并删掉，目前的操作难度太大了。</p>
+
+<h3>畅想</h3>
+
+<p>今天在虾米看到通知，4月8日22点开始账户迁移，届时虾米账户将会迁移到淘宝账户。未来再结合淘宝的购物数据，可以分析用户的职业和兴趣，在工作时间推荐跟其职业有关的音乐，如编程时的音乐、做设计时音乐&hellip;&hellip;</p>
+
+<p>反过来，如果用户经常收听“开车时听的歌”，在淘宝可以推荐汽车商品；经常听“做饭时听的歌”，在淘宝可以推荐烹饪厨具等相关商品；经常听“运动健身时听的歌”，在淘宝可以推荐体育用品；经常听“调情时听的歌”，在淘宝可以推荐情趣用品（节操，你到哪去了！）&hellip;&hellip;</p>
+
+<p>再多说一句，虾米音乐人还可以与淘宝众筹结合，帮助音乐人发布唱片，举办见面会音乐会什么的，歌迷用户可以骄傲的说，张震岳这次来杭州是我赞助的！音乐人产品未来的发展也好有想象空间呀！</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Greg</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-03-22T20:28:36+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+  
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_fb">Facebook</a>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_googleplus">Google+</a>
+
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:15,
+	sm:"qzone,tqq,pocket,evernote,xianguo,huaban,miliao,xqw,digg,wealink,tumblr,delicious,linkedin,diigo,ydnote",
+	summary:"",
+	boldNum:0,
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/github/2014/03/16/no-music-no-life/" title="Previous Post: 我用过的那些音乐 APP - 虾米">&laquo; 我用过的那些音乐 APP - 虾米</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/github/2014/03/22/xiami-client-rework/">勿忘初心 - 虾米音乐 APP 场景化有感</a>
+      </li>
+    
+      <li class="post">
+        <a href="/github/2014/03/16/no-music-no-life/">我用过的那些音乐 APP - 虾米</a>
+      </li>
+    
+      <li class="post">
+        <a href="/github/2014/02/16/QQ-caibei-analysis-report/">腾讯 QQ 彩贝产品体验分析报告</a>
+      </li>
+    
+      <li class="post">
+        <a href="/github/2014/02/11/ios-demo-show/">iOS 设备演示 Axure 原型的方法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/github/2014/02/03/road-of-o2o-3/">叩响天堂之门：我走过的 O2O 之路（三)</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Greg -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'gregchen';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://chenyifan.me/github/2014/03/22/xiami-client-rework/';
+        var disqus_url = 'http://chenyifan.me/github/2014/03/22/xiami-client-rework/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
